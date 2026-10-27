@@ -8,7 +8,7 @@ import bought from "@/assets/main-ss-iphone-3.png";
 import { useEffect, useRef, useState, type HTMLAttributes } from "react";
 
 // How long each screen stays up before moving to the next one.
-const HOLD_MS = 4200;
+const HOLD_MS = 6000;
 
 // All screenshots share the same canvas and phone frame position, so they stack exactly.
 const SCREENS = [

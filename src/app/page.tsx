@@ -79,6 +79,8 @@ export default function Home() {
         <div className="relative flex flex-col items-center justify-center gap-4 px-6 sm:gap-6 lg:flex-row">
           <a
             href={PLAY_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             data-load-reveal="blur"
             style={delay(480)}
             className="flex h-11 items-center gap-3 rounded-full bg-white px-6 text-sm font-medium text-neutral-950 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
@@ -88,6 +90,8 @@ export default function Home() {
           </a>
           <a
             href={WEB_APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             data-load-reveal="blur"
             style={delay(560)}
             className="flex h-9 items-center gap-2 border-b-[0.75px] border-white text-base font-normal transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
