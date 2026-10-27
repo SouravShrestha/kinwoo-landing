@@ -1,0 +1,14 @@
+node_modules
+.next/
+.open-next/
+next-env.d.ts
+*.tsbuildinfo
+*.log
+.wrangler/
+.dev.vars
+.env*
+!.env.example
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store

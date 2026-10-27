@@ -1,0 +1,22 @@
+name = "kinwoo-landing"
+main = ".open-next/worker.js"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+preview_urls = false
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# workers_dev and preview_urls are both off, so the Worker is only reachable
+# through these routes. kinwoo.in must be on Cloudflare DNS.
+# www.kinwoo.in is the canonical host. The apex is attached to the same Worker
+# only so it can answer with a 301 to www (see redirects() in next.config.ts).
+[[routes]]
+pattern = "www.kinwoo.in"
+custom_domain = true
+
+[[routes]]
+pattern = "kinwoo.in"
+custom_domain = true
