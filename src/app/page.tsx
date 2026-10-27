@@ -76,7 +76,7 @@ export default function Home() {
 
       {/* Wraps the buttons and phone so the sticker layer can span exactly that stretch. */}
       <div className="relative mt-8">
-        <div className="relative flex flex-wrap justify-center gap-4 px-6 sm:gap-6">
+        <div className="relative flex flex-col items-center justify-center gap-4 px-6 sm:gap-6 lg:flex-row">
           <a
             href={PLAY_STORE_URL}
             data-load-reveal="blur"
