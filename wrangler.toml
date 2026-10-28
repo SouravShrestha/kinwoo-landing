@@ -9,6 +9,13 @@ preview_urls = false
 directory = ".open-next/assets"
 binding = "ASSETS"
 
+# Early access form rate limit (src/app/api/early-access/route.ts): 1 submission per IP per 60s,
+# per Cloudflare location. namespace_id must be unique per account (kinwoo uses 2001 and 2002).
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "2003"
+simple = { limit = 1, period = 60 }
+
 # workers_dev and preview_urls are both off, so the Worker is only reachable
 # through these routes. kinwoo.in must be on Cloudflare DNS.
 # www.kinwoo.in is the canonical host. The apex is attached to the same Worker

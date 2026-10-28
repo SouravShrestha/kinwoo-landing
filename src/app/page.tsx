@@ -19,6 +19,7 @@ import sticker18 from "@/assets/sticker_18.png";
 import webIcon from "@/assets/web-icon.svg";
 import { PhoneScreens } from "@/components/PhoneScreens";
 import { Reveal } from "@/components/Reveal";
+import { TestingProgramForm } from "@/components/TestingProgramForm";
 import { LEGAL_LABELS, LEGAL_PATHS } from "@/lib/legal";
 import Link from "next/link";
 import type { CSSProperties } from "react";
@@ -122,6 +123,12 @@ export default function Home() {
         then extended downward on the same black background.
       */}
       <footer className="relative mt-[calc(-3*var(--title-size))] px-6 pt-[calc(var(--title-size)*2.5_+_9rem)] pb-8 text-sm font-medium sm:px-10 sm:pt-[calc(var(--title-size)*2.5_+_12rem)] sm:pb-10">
+        <Reveal className="mb-48 flex flex-col items-center gap-6 -mt-2 text-center">
+          <h2 className="text-(length:--title-size) leading-normal font-normal mb-2 px-14">
+            Try it before the rest of the world does
+          </h2>
+          <TestingProgramForm />
+        </Reveal>
         {/* Sits at the very bottom of the page, so it must reveal as soon as it's on screen. */}
         <Reveal
           rootMargin="0px"
