@@ -110,10 +110,7 @@ export async function POST(request: Request) {
   }
 
   if (!isGmailAddress(email)) {
-    return NextResponse.json(
-      { error: GMAIL_REQUIRED_MESSAGE },
-      { status: 400, headers: NO_STORE },
-    );
+    return NextResponse.json({ error: GMAIL_REQUIRED_MESSAGE }, { status: 400, headers: NO_STORE });
   }
 
   try {
