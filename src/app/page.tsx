@@ -124,7 +124,7 @@ export default function Home() {
       */}
       <footer className="relative mt-[calc(-3*var(--title-size))] px-6 pt-[calc(var(--title-size)*2.5_+_9rem)] pb-8 text-sm font-medium sm:px-10 sm:pt-[calc(var(--title-size)*2.5_+_12rem)] sm:pb-10">
         <Reveal className="mb-48 flex flex-col items-center gap-6 -mt-2 text-center">
-          <h2 className="text-(length:--title-size) leading-normal font-normal mb-2 px-14">
+          <h2 className="text-(length:--title-size) leading-normal font-normal mb-2 px-2">
             Try it before the rest of the world does
           </h2>
           <TestingProgramForm />
