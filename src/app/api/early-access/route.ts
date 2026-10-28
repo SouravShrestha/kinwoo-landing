@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getClientIp, isJsonRequest, isSameOrigin } from "@/lib/form-security";
+import { GMAIL_REQUIRED_MESSAGE, isGmailAddress } from "@/lib/early-access";
 import { checkRateLimit } from "@/lib/rate-limit";
 
 // Hidden field that real visitors never fill in. Keep in sync with TestingProgramForm.
@@ -104,6 +105,13 @@ export async function POST(request: Request) {
   if (!email) {
     return NextResponse.json(
       { error: "Enter a valid email address." },
+      { status: 400, headers: NO_STORE },
+    );
+  }
+
+  if (!isGmailAddress(email)) {
+    return NextResponse.json(
+      { error: GMAIL_REQUIRED_MESSAGE },
       { status: 400, headers: NO_STORE },
     );
   }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { GMAIL_REQUIRED_MESSAGE, isGmailAddress } from "@/lib/early-access";
 
 type Status =
   | { state: "idle" }
@@ -20,6 +21,14 @@ export function TestingProgramForm() {
 
     const form = event.currentTarget;
     const data = new FormData(form);
+
+    // Checked before sending so a typo does not use up the one-per-minute rate limit.
+    const email = String(data.get("email") ?? "");
+    if (!isGmailAddress(email)) {
+      setStatus({ state: "error", message: GMAIL_REQUIRED_MESSAGE });
+      return;
+    }
+
     setStatus({ state: "sending" });
 
     try {
@@ -50,7 +59,7 @@ export function TestingProgramForm() {
           maxLength={254}
           autoComplete="email"
           aria-label="Email address"
-          placeholder="you@example.com"
+          placeholder="you@gmail.com"
           disabled={sending}
           className="h-14 min-w-0 sm:flex-[2] rounded-xl border border-neutral-700 bg-transparent px-6 text-base text-white placeholder:text-neutral-500 focus-visible:border-white focus-visible:outline-none disabled:opacity-60"
         />
