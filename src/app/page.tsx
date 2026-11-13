@@ -103,15 +103,11 @@ export default function Home() {
         </div>
 
         <section className="relative mt-12 flex justify-center">
-          {/*
-          The phone frame fills only ~34% of the base screenshot's width; the rest is transparent
-          padding. It is sized so the frame is ~9.5x the title size (a bit wider than the headline),
-          and it is allowed to overflow its container sideways, centered, with main clipping it.
-        */}
+          {/* The screenshots are cropped tight to the phone frame, sized ~9.5x the title size. */}
           <PhoneScreens
             data-load-reveal="soft"
             style={delay(640)}
-            className="relative w-[calc(var(--title-size)*28)] max-w-none shrink-0"
+            className="relative w-[calc(var(--title-size)*9.5)] max-w-none shrink-0"
           />
           <BottomDissolve />
           <Stickers />

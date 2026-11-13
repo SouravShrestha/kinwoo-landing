@@ -5,6 +5,7 @@ import groceries from "@/assets/main-ss-iphone.png";
 import home from "@/assets/main-ss-iphone-1.png";
 import settleUp from "@/assets/main-ss-iphone-2.png";
 import bought from "@/assets/main-ss-iphone-3.png";
+import darkHome from "@/assets/main-ss-iphone-4.png";
 import { useEffect, useRef, useState, type HTMLAttributes } from "react";
 
 // How long each screen stays up before moving to the next one.
@@ -22,11 +23,15 @@ const SCREENS = [
   },
   {
     src: settleUp,
-    alt: "Kinwoo settle-up screen recording a ₹729.17 payment from Priya Menon",
+    alt: "Kinwoo settle-up screen recording a ₹1,247.58 payment from Priya Menon",
   },
   {
     src: bought,
     alt: "Kinwoo bought items sheet showing three groceries closed by Mohan Gowda for ₹900",
+  },
+  {
+    src: darkHome,
+    alt: "Kinwoo home screen in dark theme showing ₹1,247.58 owed across shared bills",
   },
 ];
 
@@ -78,7 +83,7 @@ export function PhoneScreens({ className = "", ...rest }: HTMLAttributes<HTMLDiv
           alt={alt}
           // Only the first screen is needed for first paint.
           priority={i === 0}
-          sizes="1232px"
+          sizes="420px"
           data-screen
           data-active={active === i ? "" : undefined}
           aria-hidden={active !== i}
