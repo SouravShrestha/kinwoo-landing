@@ -1,4 +1,4 @@
-// Copied from the Kinwoo app (packages/core/src/app/facts.ts and legal.ts). Keep the two in sync.
+// The only copy of the legal pages. The Kinwoo app links here through LEGAL_URLS.
 export const APP_NAME = "Kinwoo";
 export const SUPPORT_EMAIL = "hello@kinwoo.in";
 export const AUTHOR_NAME = "Sourav Shrestha";
