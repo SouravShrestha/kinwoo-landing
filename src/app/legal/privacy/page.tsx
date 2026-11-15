@@ -18,9 +18,10 @@ export default function PrivacyPage() {
       <LegalSection title="The short version">
         <P>
           {APP_NAME} stores what it needs to run a shared household: your account, the houses you
-          belong to, and the lists and activity inside them. There are no ads, no analytics and no
-          tracking, and nothing is sold. The people in your house can see more about you than anyone
-          else can, and that is covered below.
+          belong to, and the lists and activity inside them. The Android app shows ads from Google
+          AdMob, and our website at kinwoo.in shows ads from Google AdSense. Both ask for your
+          consent where the law requires it. There are no analytics and nothing is sold. The people
+          in your house can see more about you than anyone else can, and that is covered below.
         </P>
       </LegalSection>
 
@@ -57,21 +58,33 @@ export default function PrivacyPage() {
       <LegalSection title="How we use it">
         <P>
           To sign you in, show you your house, keep members in sync, and send the codes needed to
-          log in. We do not use it for advertising or profiling.
+          log in. We do not use it for advertising or profiling. The ads in the Android app and on
+          our website are chosen by Google, which does not receive your account or house data.
         </P>
       </LegalSection>
 
       <LegalSection title="Cookies and on-device storage">
         <List
           items={[
-            "Web: sign-in cookies set by our authentication provider. They are strictly necessary, because without them the site cannot tell that a request is yours.",
+            "Web: sign-in cookies set by our authentication provider. They are strictly necessary, because without them the site cannot tell that a request is yours. Your browser also remembers that you accepted the cookie notice.",
             "Mobile: your sign-in session is kept in the app's storage on your device.",
+            "Android app: Google AdMob uses your device's advertising ID and stores your ad consent choice on the device. You can change that choice from the consent form or reset the ID in your Android settings.",
+            "Website (kinwoo.in): Google and its partners use cookies to show ads, which can be based on your visits to this and other sites.",
             "Both: your theme, your last active house and an invite code you opened before signing in are kept on your device. They are not sent to us as tracking data.",
           ]}
         />
         <P>
           Clearing this storage or signing out removes it. Blocking the sign-in cookies will sign
           you out.
+        </P>
+        <P>
+          You can turn off personalised ads from Google in{" "}
+          <A href="https://adssettings.google.com">Google&apos;s Ads Settings</A>. To learn how
+          Google uses information from sites and apps that show its ads, see{" "}
+          <A href="https://policies.google.com/technologies/partner-sites">
+            How Google uses information from sites or apps that use its services
+          </A>
+          .
         </P>
       </LegalSection>
 
@@ -83,6 +96,8 @@ export default function PrivacyPage() {
             "Cloudflare: hosting and delivery of the web app and its API.",
             "Google: sign-in, only if you choose to continue with Google.",
             "An email delivery service: sends the sign-in codes to your address.",
+            "Google AdMob: shows ads in the Android app and handles ad consent. It collects device information such as the advertising ID and IP address under Google's own privacy policy.",
+            "Google AdSense: shows ads on our website at kinwoo.in and handles ad consent there. It uses cookies and collects device information such as IP address under Google's own privacy policy.",
           ]}
         />
         <P>

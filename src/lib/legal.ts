@@ -8,7 +8,7 @@ export const LEGAL_PATHS = {
   privacy: "/legal/privacy",
 } as const;
 
-export const LEGAL_UPDATED = "28 October 2026";
+export const LEGAL_UPDATED = "16 November 2026";
 
 export const LEGAL_LABELS = {
   terms: "Terms & Conditions",

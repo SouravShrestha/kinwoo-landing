@@ -23,6 +23,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable} style={{ backgroundColor: "#000000" }}>
+      <head>
+        {/* Plain script, not next/script: AdSense rejects the data-nscript attribute next/script adds. */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3867903352379411"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         {/* Without JS the scroll-reveal observer never runs; show everything. */}
         <noscript
